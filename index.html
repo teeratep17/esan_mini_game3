@@ -120,30 +120,14 @@
      </div>
      <h1 id="main-title" class="title-font text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-yellow-400 to-orange-400 mb-2">พิธีบั้งไฟอัญเชิญพญานาค</h1>
      <p class="text-amber-200/70 text-sm">รวบรวมชิ้นส่วนบั้งไฟศักดิ์สิทธิ์</p>
-    </div><!-- Item Collection Status -->
-    <div class="grid grid-cols-4 gap-3 mb-8 p-4 bg-slate-800/50 rounded-2xl border border-amber-500/20">
-     <div id="item-core" class="item-slot flex flex-col items-center p-2 rounded-lg bg-slate-700/50 border border-slate-600/50">
-      <div class="w-10 h-10 flex items-center justify-center text-2xl opacity-30">
-       🎋
-      </div><span class="text-xs text-slate-400 mt-1">แกนบั้งไฟ</span>
-     </div>
-     <div id="item-gunpowder" class="item-slot flex flex-col items-center p-2 rounded-lg bg-slate-700/50 border border-slate-600/50">
-      <div class="w-10 h-10 flex items-center justify-center text-2xl opacity-30">
-       ✨
-      </div><span class="text-xs text-slate-400 mt-1">ดินปืน</span>
-     </div>
-     <div id="item-pattern" class="item-slot flex flex-col items-center p-2 rounded-lg bg-slate-700/50 border border-slate-600/50">
-      <div class="w-10 h-10 flex items-center justify-center text-2xl opacity-30">
-       📜
-      </div><span class="text-xs text-slate-400 mt-1">ลวดลาย</span>
-     </div>
-     <div id="item-head" class="item-slot flex flex-col items-center p-2 rounded-lg bg-slate-700/50 border border-slate-600/50">
-      <div class="w-10 h-10 flex items-center justify-center text-2xl opacity-30">
-       🐉
-      </div><span class="text-xs text-slate-400 mt-1">หัวบั้งไฟ</span>
-     </div>
-    </div><!-- Game Selection -->
-    <div class="w-full max-w-md space-y-3"><button onclick="startGame('core')" class="w-full py-4 px-6 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 rounded-xl text-white font-semibold shadow-lg shadow-emerald-500/30 transition-all transform hover:scale-[1.02] flex items-center justify-between"> <span class="flex items-center gap-3"> <span class="text-2xl">🎋</span> <span>เรียงแกนบั้งไฟ</span> </span> <span class="text-emerald-200">▶</span> </button> <button onclick="startGame('orb')" class="w-full py-4 px-6 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 rounded-xl text-white font-semibold shadow-lg shadow-purple-500/30 transition-all transform hover:scale-[1.02] flex items-center justify-between"> <span class="flex items-center gap-3"> <span class="text-2xl">🔮</span> <span>ปลุกพลังลูกแก้ว</span> </span> <span class="text-purple-200">▶</span> </button> <button onclick="startGame('code')" class="w-full py-4 px-6 bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 rounded-xl text-white font-semibold shadow-lg shadow-amber-500/30 transition-all transform hover:scale-[1.02] flex items-center justify-between"> <span class="flex items-center gap-3"> <span class="text-2xl">🔢</span> <span>กรอกรหัสพิธีกรรม</span> </span> <span class="text-amber-200">▶</span> </button>
+    </div>
+    <!-- Game Selection -->
+    <div class="w-full max-w-md space-y-3"><button onclick="startGame('core')" class="w-full py-4 px-6 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 rounded-xl text-white font-semibold shadow-lg shadow-emerald-500/30 transition-all transform hover:scale-[1.02] flex items-center justify-between"> 
+      <span class="flex items-center gap-3"> <span>28</span> </span> <span class="text-emerald-200">▶</span> </button> <button onclick="startGame('orb')" class="w-full py-4 px-6 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 rounded-xl text-white font-semibold shadow-lg shadow-purple-500/30 transition-all transform hover:scale-[1.02] flex items-center justify-between"> <span class="flex items-center gap-3">
+        <span>44</span> </span> <span class="text-purple-200">▶</span> </button> <button onclick="startGame('code1')" class="w-full py-4 px-6 bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-500 hover:to-orange-500 rounded-xl text-white font-semibold shadow-lg shadow-amber-500/30 transition-all transform hover:scale-[1.02] flex items-center justify-between"> <span class="flex items-center gap-3"> 
+          <span>20</span> </span> <span class="text-amber-200">▶</span> </button>
+          <button onclick="startGame('code2')" class="w-full py-4 px-6 bg-gradient-to-r from-amber-600 to-pink-600 hover:from-amber-500 hover:to-orange-500 rounded-xl text-white font-semibold shadow-lg shadow-amber-500/30 transition-all transform hover:scale-[1.02] flex items-center justify-between"> <span class="flex items-center gap-3"> 
+          <span>ลองเรียงดูสิ!</span> </span> <span class="text-amber-200">▶</span> </button>
     </div>
    </div><!-- Core Alignment Game -->
    <div id="core-game" class="min-h-full flex flex-col items-center p-4 hidden">
@@ -240,59 +224,39 @@
      <div id="orb-status" class="text-center mt-4 text-slate-400 text-sm"></div>
     </div>
    </div><!-- Code Entry Screen -->
-   <div id="code-screen" class="min-h-full flex flex-col items-center justify-center p-4 hidden">
+   <div id="code-screen1" class="min-h-full flex flex-col items-center justify-center p-4 hidden">
     <div class="w-full max-w-md">
      <div class="flex justify-between items-center mb-6"><button onclick="showMenu()" class="p-2 text-amber-300 hover:text-amber-100">
        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
        </svg></button>
-      <h2 class="title-font text-xl font-bold text-amber-300">รหัสพิธีกรรม</h2>
+      <h2 class="title-font text-xl font-bold text-amber-300">รหัสลับ</h2>
       <div class="w-8"></div>
      </div><!-- Hint -->
      <div class="p-4 bg-slate-800/50 rounded-xl border border-amber-500/20 mb-6">
-      <p class="text-amber-200/80 text-sm text-center italic">"เมื่อรวมแกนบั้งไฟเข้ากับหัว<br>
-        นำดินปืนผสานลวดลาย<br>
-        เมื่อนั้นพญานาคจึงปรากฏ"</p>
+      <p class="text-amber-200/80 text-sm text-center italic">"ลองดูสิ ว่าจะมีอะไรออกมา"</p>
      </div><!-- Code Input -->
-     <div class="flex justify-center gap-3 mb-6"><input type="text" maxlength="1" class="code-input w-14 h-16 text-center text-2xl font-bold bg-slate-800 border-2 border-amber-500/50 rounded-xl text-amber-300 focus:outline-none focus:border-amber-400" oninput="moveToNext(this, 0)"> <input type="text" maxlength="1" class="code-input w-14 h-16 text-center text-2xl font-bold bg-slate-800 border-2 border-amber-500/50 rounded-xl text-amber-300 focus:outline-none focus:border-amber-400" oninput="moveToNext(this, 1)"> <input type="text" maxlength="1" class="code-input w-14 h-16 text-center text-2xl font-bold bg-slate-800 border-2 border-amber-500/50 rounded-xl text-amber-300 focus:outline-none focus:border-amber-400" oninput="moveToNext(this, 2)">
-     </div><button onclick="submitCode()" class="w-full py-3 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 rounded-xl text-white font-bold shadow-lg shadow-amber-500/30 transition-all"> ปลดล็อคพิธีกรรม </button>
+     <div class="flex justify-center gap-3 mb-6"><input type="text" maxlength="1" class="code-input w-14 h-16 text-center text-2xl font-bold bg-slate-800 border-2 border-amber-500/50 rounded-xl text-amber-300 focus:outline-none focus:border-amber-400" oninput="moveToNext1(this, 0)"> <input type="text" maxlength="1" class="code-input w-14 h-16 text-center text-2xl font-bold bg-slate-800 border-2 border-amber-500/50 rounded-xl text-amber-300 focus:outline-none focus:border-amber-400" oninput="moveToNext1(this, 1)"> <input type="text" maxlength="1" class="code-input w-14 h-16 text-center text-2xl font-bold bg-slate-800 border-2 border-amber-500/50 rounded-xl text-amber-300 focus:outline-none focus:border-amber-400" oninput="moveToNext1(this, 2)"><input type="text" maxlength="1" class="code-input w-14 h-16 text-center text-2xl font-bold bg-slate-800 border-2 border-amber-500/50 rounded-xl text-amber-300 focus:outline-none focus:border-amber-400" oninput="moveToNext1(this, 3)">
+     </div><button onclick="submitCode1()" class="w-full py-3 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 rounded-xl text-white font-bold shadow-lg shadow-amber-500/30 transition-all"> ปลดล็อครหัสลับ </button>
      <div id="code-message" class="text-center mt-4 text-sm"></div>
     </div>
-   </div><!-- Victory Screen -->
-   <div id="victory-screen" class="min-h-full flex flex-col items-center justify-center p-4 hidden">
-    <div class="text-center"><!-- Naga Animation -->
-     <div id="naga-animation" class="naga-rise mb-8">
-      <svg width="200" height="200" viewbox="0 0 200 200" class="mx-auto glow-animation"><defs>
-        <lineargradient id="nagaBodyGold" x1="0%" y1="0%" x2="100%" y2="100%">
-         <stop offset="0%" style="stop-color:#ffd700" />
-         <stop offset="50%" style="stop-color:#ffaa00" />
-         <stop offset="100%" style="stop-color:#ff6600" />
-        </lineargradient>
-        <filter id="glow">
-         <fegaussianblur stddeviation="3" result="coloredBlur" />
-         <femerge>
-          <femergenode in="coloredBlur" />
-          <femergenode in="SourceGraphic" />
-         </femerge>
-        </filter>
-       </defs> <!-- Naga Body --> <path d="M100 180 Q60 140 70 100 Q80 60 100 40 Q120 60 130 100 Q140 140 100 180" fill="url(#nagaBodyGold)" filter="url(#glow)" /> <!-- Naga Head --> <ellipse cx="100" cy="45" rx="25" ry="20" fill="url(#nagaBodyGold)" /> <!-- Crown --> <path d="M80 35 L85 20 L90 30 L95 15 L100 30 L105 15 L110 30 L115 20 L120 35" fill="#ffd700" stroke="#ffaa00" stroke-width="1" /> <!-- Eyes --> <circle cx="92" cy="42" r="4" fill="#1a1a2e" /> <circle cx="108" cy="42" r="4" fill="#1a1a2e" /> <circle cx="93" cy="41" r="1.5" fill="#fff" /> <circle cx="109" cy="41" r="1.5" fill="#fff" /> <!-- Spirit Stone --> <circle cx="100" cy="85" r="15" fill="#64ffda" opacity="0.9" filter="url(#glow)" /> <circle cx="100" cy="85" r="10" fill="#a7ffeb" /> <circle cx="95" cy="80" r="3" fill="#fff" opacity="0.8" />
-      </svg>
-     </div>
-     <h2 class="title-font text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-yellow-400 mb-4">พญานาคปรากฏกาย!</h2>
-     <p class="text-amber-200/80 mb-6 max-w-sm mx-auto">พญานาคมอบ "หินวิญญาณแห่งสายน้ำ" ให้แก่ท่าน<br>
-       โลกได้รับการฟื้นฟูเพิ่มขึ้นอีกส่วนหนึ่ง</p><!-- Spirit Stone -->
-     <div class="inline-block p-4 bg-gradient-to-br from-teal-500/20 to-cyan-500/20 rounded-2xl border border-cyan-400/30 mb-8">
-      <div class="text-4xl mb-2">
-       💎
-      </div>
-      <div class="text-cyan-300 font-semibold">
-       หินวิญญาณแห่งสายน้ำ
-      </div>
-      <div class="text-cyan-400/70 text-sm">
-       ได้รับแล้ว!
-      </div>
-     </div><button onclick="resetGame()" class="py-3 px-8 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 rounded-xl text-white font-bold shadow-lg transition-all"> เล่นอีกครั้ง </button>
+   </div>
+   <div id="code-screen2" class="min-h-full flex flex-col items-center justify-center p-4 hidden">
+    <div class="w-full max-w-md">
+     <div class="flex justify-between items-center mb-6"><button onclick="showMenu()" class="p-2 text-amber-300 hover:text-amber-100">
+       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+       </svg></button>
+      <h2 class="title-font text-xl font-bold text-amber-300">รหัสลับ</h2>
+      <div class="w-8"></div>
+     </div><!-- Hint -->
+     <div class="p-4 bg-slate-800/50 rounded-xl border border-amber-500/20 mb-6">
+      <p class="text-amber-200/80 text-sm text-center italic">"ลองเรียงดูสิ ว่าจะมีอะไรออกมา"</p>
+     </div><!-- Code Input -->
+     <div class="flex justify-center gap-3 mb-6"><input type="text" maxlength="1" class="code-input w-14 h-16 text-center text-2xl font-bold bg-slate-800 border-2 border-amber-500/50 rounded-xl text-amber-300 focus:outline-none focus:border-amber-400" oninput="moveToNext2(this, 0)"> <input type="text" maxlength="1" class="code-input w-14 h-16 text-center text-2xl font-bold bg-slate-800 border-2 border-amber-500/50 rounded-xl text-amber-300 focus:outline-none focus:border-amber-400" oninput="moveToNext2(this, 1)"> <input type="text" maxlength="1" class="code-input w-14 h-16 text-center text-2xl font-bold bg-slate-800 border-2 border-amber-500/50 rounded-xl text-amber-300 focus:outline-none focus:border-amber-400" oninput="moveToNext2(this, 2)">
+     </div><button onclick="submitCode2()" class="w-full py-3 bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 rounded-xl text-white font-bold shadow-lg shadow-amber-500/30 transition-all"> ปลดล็อครหัสลับ </button>
+     <div id="code-message" class="text-center mt-4 text-sm"></div>
     </div>
    </div>
+   
   </div>
   <script>
     // Default configuration
@@ -333,7 +297,8 @@
     };
     
     // Secret code for final unlock (can be changed)
-    const SECRET_CODE = '789';
+    const SECRET_CODE1 = '6967';
+    const SECRET_CODE2 = '871';
     
     // Initialize SDK
     if (window.elementSdk) {
@@ -407,27 +372,15 @@
           showScreen('orb-game');
           initOrbGame();
           break;
-        case 'code':
-          showScreen('code-screen');
+        case 'code1':
+          showScreen('code-screen1');
+          break;
+        case 'code2':
+          showScreen('code-screen2');
           break;
       }
     }
     
-    // Item Display Update
-    function updateItemDisplay() {
-      const items = ['core', 'gunpowder', 'pattern', 'head'];
-      const icons = ['🎋', '✨', '📜', '🐉'];
-      
-      items.forEach((item, i) => {
-        const slot = document.getElementById(`item-${item}`);
-        const iconDiv = slot.querySelector('div');
-        if (gameState.items[item]) {
-          iconDiv.classList.remove('opacity-30');
-          iconDiv.classList.add('glow-animation');
-          slot.classList.add('border-amber-500/50', 'bg-amber-900/20');
-        }
-      });
-    }
     
     // ==================== CORE ALIGNMENT GAME ====================
     const coreColors = ['#ef4444', '#3b82f6', '#22c55e', '#eab308', '#a855f7', '#ec4899'];
@@ -580,7 +533,7 @@
           // Game complete!
           clearTimers();
           gameState.items.core = true;
-          showItemObtained('🎋', 'แกนบั้งไฟ', () => showMenu());
+          showItemObtained('สำเร็จ', 'การ์ดหมายเลข 4', () => showMenu());
         } else {
           gameState.coreGame.round++;
           startCoreRound();
@@ -729,7 +682,7 @@
             // Game complete!
             gameState.items.head = true;
             setTimeout(() => {
-              showItemObtained('🐉', 'หัวบั้งไฟวิญญาณ', () => showMenu());
+              showItemObtained('สำเร็จ', 'การ์ดหมายเลข 5', () => showMenu());
             }, 500);
           } else {
             // Next level
@@ -765,29 +718,55 @@
     }
     
     // ==================== CODE ENTRY ====================
-    function moveToNext(input, index) {
-      const inputs = document.querySelectorAll('.code-input');
+    function moveToNext1(input, index) {
+      const inputs = document.querySelectorAll('#code-screen1 .code-input');
+      if (input.value.length === 1 && index < inputs.length - 1) {
+        inputs[index + 1].focus();
+      }
+    }
+    function moveToNext2(input, index) {
+      const inputs = document.querySelectorAll('#code-screen2 .code-input');
       if (input.value.length === 1 && index < inputs.length - 1) {
         inputs[index + 1].focus();
       }
     }
     
-    function submitCode() {
+    function submitCode1() {
       const inputs = document.querySelectorAll('.code-input');
       const code = [...inputs].map(i => i.value).join('');
       const messageEl = document.getElementById('code-message');
       
-      if (code === SECRET_CODE) {
-        messageEl.innerHTML = '<span class="text-emerald-400">รหัสถูกต้อง! พญานาคจะปรากฏ...</span>';
+      if (code === SECRET_CODE1) {
+        messageEl.innerHTML = '<span class="text-emerald-400">รหัสถูกต้อง!</span>';
         setTimeout(() => {
-          showScreen('victory-screen');
-        }, 1500);
-      } else {
+              showItemObtained('สำเร็จ', 'การ์ดไอเทมดินปืน', () => showMenu());
+            }, 500);
+      }
+       else {
         messageEl.innerHTML = '<span class="text-red-400">รหัสไม่ถูกต้อง ลองอีกครั้ง</span>';
         inputs.forEach(i => i.value = '');
         inputs[0].focus();
       }
     }
+
+    function submitCode2() {
+      const inputs = document.querySelectorAll('.code-input');
+      const code = [...inputs].map(i => i.value).join('');
+      const messageEl = document.getElementById('code-message');
+      
+      if (code === SECRET_CODE2) {
+        messageEl.innerHTML = '<span class="text-emerald-400">รหัสถูกต้อง!</span>';
+        setTimeout(() => {
+              showItemObtained('สำเร็จ', 'การ์ดไอเทมลวดลาย', () => showMenu());
+            }, 500);
+      }
+       else {
+        messageEl.innerHTML = '<span class="text-red-400">รหัสไม่ถูกต้อง ลองอีกครั้ง</span>';
+        inputs.forEach(i => i.value = '');
+        inputs[0].focus();
+      }
+    }
+
     
     // ==================== UTILITIES ====================
     function clearTimers() {

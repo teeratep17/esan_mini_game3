@@ -732,7 +732,7 @@
     }
     
     function submitCode1() {
-      const inputs = document.querySelectorAll('.code-input');
+      const inputs = document.querySelectorAll('#code-screen1 .code-input');
       const code = [...inputs].map(i => i.value).join('');
       const messageEl = document.getElementById('code-message');
       
@@ -750,7 +750,7 @@
     }
 
     function submitCode2() {
-      const inputs = document.querySelectorAll('.code-input');
+      const inputs = document.querySelectorAll('#code-screen2 .code-input');
       const code = [...inputs].map(i => i.value).join('');
       const messageEl = document.getElementById('code-message');
       
